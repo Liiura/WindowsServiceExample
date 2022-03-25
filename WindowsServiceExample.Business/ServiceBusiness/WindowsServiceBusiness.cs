@@ -32,6 +32,7 @@ namespace WindowsServiceExample.Business.ServiceBusiness
                                 PurchaseDate = product.PurchaseDate,
                                 Type = product.Type
                             };
+                            productsList.Add(dataToInsert);
                         }
                         context.Product.AddRange(productsList);
                         await context.SaveChangesAsync();
